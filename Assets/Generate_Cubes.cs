@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Generate_Cubes : MonoBehaviour {
-
+    
 	// Use this for initialization
 	void Start () {
         List<Rigidbody> boxes;
@@ -13,7 +13,7 @@ public class Generate_Cubes : MonoBehaviour {
             for (int j = 0; j < 10; j++)
             {
                 GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-                cube.transform.Translate(i * 1f, j * 1f, 0);
+                cube.transform.Translate(i * 1f + 10f, j * 1f, 0);
                 cube.AddComponent<Rigidbody>();
                 cube.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
             }
